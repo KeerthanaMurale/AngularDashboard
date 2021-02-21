@@ -1,0 +1,30 @@
+
+<div style="padding: 56px;
+margin: 20px;
+margin-left: 130px;" >
+<b> Admin Dashboard</b><br/><br/>
+<div>
+<label>Customer Id&nbsp;</label>
+<input type="text" [(ngModel)]="customerId"></div>
+<br/>
+<div><label>Product Id&nbsp; &nbsp; </label>
+<input type="text"  [(ngModel)]="productId">
+</div> <br/>
+<div>
+    <button (click)="fetchRecord()">Fetch Full Sync</button>&nbsp; &nbsp;
+    <button (click)="fetchNextRecord()">Fetch Incremental Sync</button>
+</div>
+<br/>
+
+<div>
+<ag-grid-angular 
+    style="width: 821px;
+    height: 300px;" 
+    class="ag-theme-balham"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="rows" 
+    [columnDefs]="columns">
+</ag-grid-angular>
+</div>
+</div>
